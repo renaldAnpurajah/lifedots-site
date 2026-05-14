@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Privacy policy — lifedots</title>
+<meta name="description" content="lifedots collects no data. No analytics, no accounts, no internet permission.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --linen:    #F8F4ED;
+    --obsidian: #1A1816;
+    --brick:    #9B4338;
+    --muted:    rgba(26, 24, 22, 0.6);
+    --faint:    rgba(26, 24, 22, 0.15);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --linen:    #0F0F11;
+      --obsidian: #ECEAE3;
+      --brick:    #B85B49;
+      --muted:    rgba(236, 234, 227, 0.6);
+      --faint:    rgba(236, 234, 227, 0.15);
+    }
+  }
+  html, body { background: var(--linen); color: var(--obsidian); }
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 400;
+    line-height: 1.65;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+  }
+  main {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 64px 32px 64px;
+  }
+  .wordmark {
+    font-size: 14px;
+    letter-spacing: 0.16em;
+    text-transform: lowercase;
+    margin: 0 0 8px;
+  }
+  .wordmark a { color: var(--obsidian); text-decoration: none; }
+  .updated {
+    font-size: 13px;
+    color: var(--muted);
+    margin: 0 0 48px;
+  }
+  h1 {
+    font-size: 28px;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    margin: 0 0 32px;
+  }
+  h2 {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 48px 0 12px;
+  }
+  p { margin: 0 0 16px; }
+  p.lede { font-size: 17px; }
+  a { color: var(--obsidian); text-underline-offset: 3px; }
+  a:hover { color: var(--brick); }
+  table { border-collapse: collapse; width: 100%; margin: 16px 0; font-size: 15px; }
+  th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--faint); }
+  th { font-weight: 500; }
+  td:last-child { width: 30%; }
+  code { background: var(--faint); padding: 2px 6px; border-radius: 3px; font-size: 13px; font-family: ui-monospace, SFMono-Regular, monospace; }
+  footer { color: var(--muted); font-size: 13px; margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--faint); }
+</style>
+</head>
+<body>
+<main>
+  <p class="wordmark"><a href="index.html">lifedots</a></p>
+  <p class="updated">Privacy policy · last updated 15 May 2026</p>
+
+  <h1>Privacy policy</h1>
+
+  <p class="lede"><strong>lifedots collects nothing about you.</strong></p>
+
+  <p>The app stores three things on your device — your birth date, your chosen life expectancy, and your visual preferences (theme + accent color). Nothing else. None of this ever leaves your phone.</p>
+
+  <p>The app does not request the <code>INTERNET</code> permission. It is technically incapable of contacting any server — including the developer's, Google's, or any analytics service. There is no account, no login, no cloud sync, no ads, no third-party SDK, no crash reporting, no telemetry.</p>
+
+  <p>If you uninstall lifedots, all data is removed with it.</p>
+
+  <h2>Data we collect</h2>
+  <table>
+    <thead>
+      <tr><th>Data type</th><th>Collected?</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Personal info (name, email, phone, address)</td><td>No</td></tr>
+      <tr><td>Location</td><td>No</td></tr>
+      <tr><td>Device or other identifiers</td><td>No</td></tr>
+      <tr><td>Usage or analytics</td><td>No</td></tr>
+      <tr><td>Crash logs</td><td>No</td></tr>
+      <tr><td>Diagnostics or performance</td><td>No</td></tr>
+      <tr><td>Contacts, photos, files, messages</td><td>No</td></tr>
+      <tr><td>Camera, microphone</td><td>No</td></tr>
+      <tr><td>Anything else</td><td>No</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Data stored on your device</h2>
+  <p>The following is stored locally using Android's DataStore Preferences and never leaves the device:</p>
+  <ul>
+    <li>Your birth date</li>
+    <li>Your chosen life expectancy (in years)</li>
+    <li>Your selected theme (light / dark / system)</li>
+    <li>Your selected accent color (brick / sage / brass)</li>
+  </ul>
+  <p>This data is used solely to render the live wallpaper. It is not shared with the developer or any third party.</p>
+
+  <h2>Permissions requested</h2>
+  <p><code>android.permission.BIND_WALLPAPER</code> — the system permission required for the app to register itself as a live wallpaper. This is the only permission the app declares.</p>
+  <p>The app does <strong>not</strong> declare <code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code>, storage, location, camera, microphone, contacts, calendar, SMS, phone, or any sensor permission.</p>
+
+  <h2>Children</h2>
+  <p>The app is suitable for all ages. It is not directed at children specifically and does not collect data from anyone, including children.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>If this policy ever changes, the new version will be posted at the same URL. The history of changes is available in the public repository where this page is hosted.</p>
+
+  <h2>Contact</h2>
+  <p>Questions: <a href="mailto:thejren@gmail.com">thejren@gmail.com</a></p>
+
+  <footer>
+    <p>lifedots is an open-source-spirited personal project. The source for this site lives at <a href="https://github.com/renaldAnpurajah/lifedots-site">github.com/renaldAnpurajah/lifedots-site</a>.</p>
+  </footer>
+</main>
+</body>
+</html>
