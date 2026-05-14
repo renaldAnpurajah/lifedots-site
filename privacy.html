@@ -32,6 +32,7 @@
     line-height: 1.65;
     margin: 0;
     padding: 0;
+    border-top: 2px solid var(--brick);
     -webkit-font-smoothing: antialiased;
   }
   main {
@@ -40,12 +41,22 @@
     padding: 64px 32px 64px;
   }
   .wordmark {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
     font-size: 14px;
     letter-spacing: 0.16em;
     text-transform: lowercase;
     margin: 0 0 8px;
   }
   .wordmark a { color: var(--obsidian); text-decoration: none; }
+  .wordmark .dot {
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--brick);
+  }
   .updated {
     font-size: 13px;
     color: var(--muted);
@@ -62,10 +73,21 @@
     font-weight: 500;
     margin: 48px 0 12px;
   }
+  h2::before {
+    content: "—";
+    color: var(--brick);
+    margin-right: 10px;
+    font-weight: 400;
+  }
   p { margin: 0 0 16px; }
   p.lede { font-size: 17px; }
-  a { color: var(--obsidian); text-underline-offset: 3px; }
-  a:hover { color: var(--brick); }
+  a {
+    color: var(--obsidian);
+    text-underline-offset: 3px;
+    text-decoration-color: var(--faint);
+    transition: color 200ms ease, text-decoration-color 200ms ease;
+  }
+  a:hover { color: var(--brick); text-decoration-color: var(--brick); }
   table { border-collapse: collapse; width: 100%; margin: 16px 0; font-size: 15px; }
   th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--faint); }
   th { font-weight: 500; }
@@ -76,7 +98,7 @@
 </head>
 <body>
 <main>
-  <p class="wordmark"><a href="index.html">lifedots</a></p>
+  <p class="wordmark"><a href="index.html">lifedots</a><span class="dot" aria-hidden="true"></span></p>
   <p class="updated">Privacy policy · last updated 15 May 2026</p>
 
   <h1>Privacy policy</h1>
@@ -122,10 +144,10 @@
   <p>The app does <strong>not</strong> declare <code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code>, storage, location, camera, microphone, contacts, calendar, SMS, phone, or any sensor permission.</p>
 
   <h2>Children</h2>
-  <p>The app is suitable for all ages. It is not directed at children specifically and does not collect data from anyone, including children.</p>
+  <p>lifedots is suitable for any age. It collects no data from anyone — children included.</p>
 
   <h2>Changes to this policy</h2>
-  <p>If this policy ever changes, the new version will be posted at the same URL. The history of changes is available in the public repository where this page is hosted.</p>
+  <p>If it ever changes, the new version goes up at the same URL. The full history lives in the public repo this site is built from.</p>
 
   <h2>Contact</h2>
   <p>Questions: <a href="mailto:themookut@gmail.com">themookut@gmail.com</a></p>

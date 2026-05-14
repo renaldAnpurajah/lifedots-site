@@ -7,7 +7,7 @@
 <meta name="description" content="A quiet Android live wallpaper. One dot per week of your life.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@1,500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root {
     --linen:    #F8F4ED;
@@ -32,6 +32,7 @@
     line-height: 1.6;
     margin: 0;
     padding: 0;
+    border-top: 2px solid var(--brick);
     -webkit-font-smoothing: antialiased;
   }
   main {
@@ -40,11 +41,21 @@
     padding: 96px 32px 64px;
   }
   .wordmark {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
     font-size: 14px;
     letter-spacing: 0.16em;
     text-transform: lowercase;
     margin: 0 0 64px;
     color: var(--obsidian);
+  }
+  .wordmark .dot {
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--brick);
   }
   h1 {
     font-size: 28px;
@@ -53,11 +64,26 @@
     line-height: 1.3;
     margin: 0 0 24px;
   }
+  .serif {
+    font-family: 'EB Garamond', Georgia, 'Times New Roman', serif;
+    font-style: italic;
+    font-weight: 500;
+    color: var(--brick);
+    font-size: 1.08em;
+    letter-spacing: 0.005em;
+  }
   p { margin: 0 0 16px; color: var(--obsidian); }
   p.lede { font-size: 17px; color: var(--obsidian); }
   p.muted { color: var(--muted); font-size: 14px; }
-  a { color: var(--obsidian); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
-  a:hover { color: var(--brick); }
+  a {
+    color: var(--obsidian);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+    text-decoration-color: var(--faint);
+    transition: color 200ms ease, text-decoration-color 200ms ease;
+  }
+  a:hover { color: var(--brick); text-decoration-color: var(--brick); }
   hr { border: 0; border-top: 1px solid var(--faint); margin: 48px 0; }
   ul.links { list-style: none; padding: 0; margin: 32px 0 0; }
   ul.links li { margin: 0 0 12px; }
@@ -67,13 +93,13 @@
 </head>
 <body>
 <main>
-  <p class="wordmark">lifedots</p>
+  <p class="wordmark">lifedots<span class="dot" aria-hidden="true"></span></p>
 
-  <h1>your life, in dots.</h1>
+  <h1>your life, in <span class="serif">dots</span>.</h1>
 
   <p class="lede">A quiet Android live wallpaper. One dot per week of your life — past weeks filled, future weeks faint, the current week glowing in a single accent color.</p>
 
-  <p class="muted">No notifications. No analytics. No internet. No data leaves your phone. <span class="accent">·</span></p>
+  <p class="muted">No notifications · no analytics · no internet · <span class="accent">no data leaves your phone</span>.</p>
 
   <ul class="links">
     <li><a href="privacy.html">Privacy policy</a></li>
