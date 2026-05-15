@@ -75,6 +75,31 @@
   p { margin: 0 0 16px; color: var(--obsidian); }
   p.lede { font-size: 17px; color: var(--obsidian); }
   p.muted { color: var(--muted); font-size: 14px; }
+  .weeks {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 7px;
+    margin: 36px 0 28px;
+  }
+  .weeks span {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--obsidian);
+    flex: 0 0 6px;
+  }
+  .weeks span.faint {
+    background: transparent;
+    box-shadow: inset 0 0 0 1px var(--faint);
+  }
+  .weeks span.now {
+    width: 8px;
+    height: 8px;
+    flex: 0 0 8px;
+    background: var(--brick);
+    box-shadow: 0 0 0 4px color-mix(in srgb, var(--brick) 15%, transparent);
+  }
   a {
     color: var(--obsidian);
     text-decoration: underline;
@@ -97,7 +122,11 @@
 
   <h1>your life, in <span class="serif">dots</span>.</h1>
 
-  <p class="lede">A quiet Android live wallpaper. One dot per week of your life — past weeks filled, future weeks faint, the current week glowing in a single accent color.</p>
+  <p class="lede">A quiet Android live wallpaper. One dot per week of your life — past weeks filled, future weeks faint, the current week glowing in a single <span class="accent">accent color</span>.</p>
+
+  <div class="weeks" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span class="now"></span><span class="faint"></span><span class="faint"></span><span class="faint"></span><span class="faint"></span><span class="faint"></span><span class="faint"></span><span class="faint"></span><span class="faint"></span><span class="faint"></span><span class="faint"></span><span class="faint"></span><span class="faint"></span><span class="faint"></span><span class="faint"></span><span class="faint"></span><span class="faint"></span><span class="faint"></span><span class="faint"></span><span class="faint"></span><span class="faint"></span><span class="faint"></span><span class="faint"></span><span class="faint"></span><span class="faint"></span><span class="faint"></span><span class="faint"></span><span class="faint"></span><span class="faint"></span><span class="faint"></span><span class="faint"></span><span class="faint"></span><span class="faint"></span><span class="faint"></span>
+  </div>
 
   <p class="muted">No notifications · no analytics · no internet · <span class="accent">no data leaves your phone</span>.</p>
 
